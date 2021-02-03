@@ -1,0 +1,19 @@
+<div class="container max-w-screen-sm">
+  <renderless-template-switch initial="login">
+    <div slot-scope="{ active, show }">
+      <div
+        v-show="active === 'login'"
+        key="login"
+      >
+        {% render 'layout-account-login' %}
+      </div>
+
+      <div
+        v-show="active === 'forgot-password'"
+        key="forgot-password"
+      >
+        {% render 'layout-account-forgot-password' %}
+      </div>
+    </div>
+  </renderless-template-switch>
+</div>
